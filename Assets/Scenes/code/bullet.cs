@@ -24,9 +24,9 @@ public class Bullet : MonoBehaviour
         if (rb == null) rb = GetComponent<Rigidbody2D>();
 
         rb.gravityScale = 0;
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
 
-        rb.velocity = new Vector2(dir * speed, 0f);
+        rb.linearVelocity = new Vector2(dir * speed, 0f);
 
         Destroy(gameObject, lifeTime);
     }

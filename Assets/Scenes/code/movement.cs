@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCooldownTimer <= 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce * jumpBoost);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * jumpBoost);
             jumpCooldownTimer = jumpCooldown;
         }
 
@@ -71,18 +71,18 @@ public class PlayerMovement : MonoBehaviour
     {
         float speed = moveSpeed;
 
-        bool inAir = Mathf.Abs(rb.velocity.y) > 0.01f;
+        bool inAir = Mathf.Abs(rb.linearVelocity.y) > 0.01f;
         if (inAir)
             speed *= airControlMultiplier;
 
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
 
         ApplyBetterGravity();
 
         // 🔥 ทำให้ขึ้นไวขึ้น (พุ่งขึ้นทันที ไม่หน่วง)
-        if (rb.velocity.y > 0)
+        if (rb.linearVelocity.y > 0)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (jumpUpMultiplier - 1) * Time.fixedDeltaTime;
+            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (jumpUpMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
 
@@ -108,13 +108,13 @@ public class PlayerMovement : MonoBehaviour
     // ===== Gravity feel =====
     void ApplyBetterGravity()
     {
-        if (rb.velocity.y < 0)
+        if (rb.linearVelocity.y < 0)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
+            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
         }
-        else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
+            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
 }
