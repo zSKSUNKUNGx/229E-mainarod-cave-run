@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8620059722643925869}
   - component: {fileID: 3878659766258965604}
-  - component: {fileID: 1689351227479743229}
   - component: {fileID: 941522156961418387}
-  - component: {fileID: 6140658388504764298}
+  - component: {fileID: -8490648662705309065}
+  - component: {fileID: 8323387663913904292}
   m_Layer: 0
-  m_Name: bullet
+  m_Name: bullet enemy
   m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 7846924318125342517, guid: abb2cc7abd8823f49a3de929f62c33e4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.79689026, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -93,21 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1689351227479743229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078252807232822116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e33c3fbe27ab574aa9560b5efbf7cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  lifeTime: 2
-  gravityScale: 1
 --- !u!50 &941522156961418387
 Rigidbody2D:
   serializedVersion: 5
@@ -119,7 +104,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
@@ -135,8 +120,24 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!70 &6140658388504764298
-CapsuleCollider2D:
+--- !u!114 &-8490648662705309065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078252807232822116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fce253d9502481d42950b85a5c64fbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyProjectile
+  damageAmount: 30
+  speed: 10
+  gravityScale: 1
+  lifeTime: 5
+--- !u!61 &8323387663913904292
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -170,5 +171,14 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.62, y: 2.38}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Size: {x: 1.62, y: 2.38}
-  m_Direction: 0
+  m_EdgeRadius: 0
