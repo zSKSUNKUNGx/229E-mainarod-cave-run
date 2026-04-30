@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 74bdbdb57cc7fd743a7b4aaa31f327e3
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 048b7e548aa52924596a9ebff3a6de21
   - enabled: 0
     path: Assets/Scenes/Level4.unity
     guid: eb3d6fea66595a64b855576b79dbd7b4
@@ -29,9 +32,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level6.unity
     guid: d81817c9ca376d84cb50222e3ed9a187
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 048b7e548aa52924596a9ebff3a6de21
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 3590b91b4603b465dbb4216d601bff33, type: 3}
   m_UseUCBPForAssetBundles: 0

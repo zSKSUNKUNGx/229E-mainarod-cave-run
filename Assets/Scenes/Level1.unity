@@ -2436,7 +2436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44672b23e08b4d42b4649ffb9e8b2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSceneOnTrigger
-  sceneAsset: {fileID: 102900000, guid: 1a2d95fb61784e94ca932489ebb6a87f, type: 3}
+  sceneName: Level2
   targetPlayer: {fileID: 1976361751}
 --- !u!212 &1209136522
 SpriteRenderer:
