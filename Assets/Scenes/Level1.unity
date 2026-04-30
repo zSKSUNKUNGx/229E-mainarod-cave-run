@@ -562,16 +562,16 @@ RectTransform:
   m_GameObject: {fileID: 207744159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.1570125, y: 5.906565, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 595666853}
   - {fileID: 231693021}
   m_Father: {fileID: 1636423887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -192, y: -99.8}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 296, y: 145}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207744161
@@ -2436,7 +2436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44672b23e08b4d42b4649ffb9e8b2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSceneOnTrigger
-  sceneAsset: {fileID: 102900000, guid: fa80f4428bfe9c245b4e7977922b3d47, type: 3}
+  sceneAsset: {fileID: 102900000, guid: 1a2d95fb61784e94ca932489ebb6a87f, type: 3}
   targetPlayer: {fileID: 1976361751}
 --- !u!212 &1209136522
 SpriteRenderer:
@@ -2808,7 +2808,7 @@ Transform:
   m_GameObject: {fileID: 1501412427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -89.39, y: -44.78, z: 0}
+  m_LocalPosition: {x: -89.15, y: -44.78, z: 0}
   m_LocalScale: {x: 1, y: 13.784235, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
